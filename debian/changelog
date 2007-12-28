@@ -1,0 +1,32 @@
+libpam-krb524 (1.3-0debathena1) unstable; urgency=low
+
+  * include syslog.h
+
+ -- Tim Abbott <tabbott@mit.edu>  Sun, 28 Oct 2007 21:09:05 -0400
+
+libpam-krb524 (1.2-0debathena2) unstable; urgency=low
+
+  * Rename to libpam-krb524.
+
+ -- Anders Kaseorg <andersk@mit.edu>  Tue, 24 Jul 2007 21:47:32 -0400
+
+libpam-krb4 (1.2-0debathena1) unstable; urgency=low
+
+  * Remove the minimum uid check, because libnss-nonlocal is a much
+    better solution.
+  * Section: debathena/libs.
+
+ -- Anders Kaseorg <andersk@mit.edu>  Sat, 21 Jul 2007 03:19:29 -0400
+
+libpam-krb4 (1.1-0debathena1) unstable; urgency=low
+
+  * Remove -pthread.
+  * Minor cleanup.
+
+ -- Anders Kaseorg <andersk@mit.edu>  Tue, 17 Jul 2007 16:15:24 -0400
+
+libpam-krb4 (1.0-0debathena1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Tim Abbott <tabbott@mit.edu>  Fri, 13 Jul 2007 01:34:52 -0400

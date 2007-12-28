@@ -1,0 +1,15 @@
+Source: libpam-krb524
+Section: debathena/libs
+Priority: optional
+Maintainer: Tim Abbott <tabbott@mit.edu>
+Standards-Version: 3.7.2
+Build-Depends: cdbs (>= 0.4.23-1.1), debhelper (>= 4.2.0), libpam0g-dev, libkrb5-dev
+
+Package: libpam-krb524
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, krb5-user, libpam-krb5
+Conflicts: debathena-libpam-krb5 (<= 1.0-12debathena3), libpam-krb4 (<= 1.2-0debathena2)
+Replaces: libpam-krb4 (<= 1.2-0debathena2)
+Description: PAM module to manage krb4 tickets via krb524init
+ This PAM module gets Kerberos 4 tickets with a cache name based on
+ the user's Kerberos 5 tickets, and removes them on logout.  

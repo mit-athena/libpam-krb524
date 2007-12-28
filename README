@@ -1,0 +1,11 @@
+This is the README for pam_krb524, a PAM session module which gets the 
+user Kerberos 4 tickets on login using krb524init, and removes them on 
+logout.
+
+One uses the module by adding the line
+
+session    optional   pam_krb524.so
+
+in /etc/pam.d/common-session after pam_krb5.so.
+
+It supports the debug option.
