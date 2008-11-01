@@ -1,3 +1,9 @@
+libpam-krb524 (1.3-0debathena3) unstable; urgency=low
+
+  * Self-enable with pam-auth-update where available.
+
+ -- Greg Price <price@mit.edu>  Sat,  1 Nov 2008 02:29:51 -0400
+
 libpam-krb524 (1.3-0debathena2) unstable; urgency=low
 
   * Set maintainer to debathena@mit.edu.
