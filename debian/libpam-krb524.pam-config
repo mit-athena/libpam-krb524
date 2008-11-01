@@ -1,4 +1,4 @@
-Name: Get Kerberos 4 tickets on login, destroy on logout
+Name: Get Kerberos 4 tickets on login; destroy on logout
 Default: yes
 Priority: 20
 Session-Type: Additional

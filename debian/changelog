@@ -1,3 +1,9 @@
+libpam-krb524 (1.3-0debathena4) unstable; urgency=low
+
+  * s/,/;/ in Name: field as debconf hates (or loves?) commas
+
+ -- Greg Price <price@mit.edu>  Sat,  1 Nov 2008 05:57:08 -0400
+
 libpam-krb524 (1.3-0debathena3) unstable; urgency=low
 
   * Self-enable with pam-auth-update where available.
