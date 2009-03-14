@@ -46,12 +46,13 @@
  * KRB5CCNAME.
  */
 static int
-get_krb4_name(pam_handle_t *pamh, const char **cache_name, char *cache_name4, size_t len)
+get_krb4_name(pam_handle_t *pamh, const char **cache_name, char *cache_name4, size_t len, int debug)
 {
     int n;
     *cache_name = pam_getenv(pamh, "KRB5CCNAME");
     if (*cache_name == NULL) {
-	syslog(LOG_ERR, "pam_krb524: No krb5 cache found");
+	if (debug)
+	    syslog(LOG_DEBUG, "pam_krb524: No krb5 cache found");
 	return PAM_SESSION_ERR;
     }
 
@@ -109,8 +110,8 @@ pam_sm_open_session(pam_handle_t *pamh, int flags, int argc,
     uid = pw->pw_uid;
     gid = pw->pw_gid;
 
-    if ((pamret = get_krb4_name(pamh, &cache_name, cache_name4, MAXBUF)) !=
-	PAM_SUCCESS)
+    if ((pamret = get_krb4_name(pamh, &cache_name, cache_name4, MAXBUF, debug))
+	!= PAM_SUCCESS)
 	return pamret;
 
     if (debug)
@@ -188,8 +189,8 @@ pam_sm_close_session(pam_handle_t *pamh, int flags, int argc, const char **argv)
 	    debug = 1;
     }
 
-    if ((pamret = get_krb4_name(pamh, &cache_name, cache_name4, MAXBUF)) !=
-	PAM_SUCCESS)
+    if ((pamret = get_krb4_name(pamh, &cache_name, cache_name4, MAXBUF, debug))
+	!= PAM_SUCCESS)
 	return pamret;
 
     if (debug)
