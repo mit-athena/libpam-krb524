@@ -2,8 +2,8 @@ Source: libpam-krb524
 Section: debathena/libs
 Priority: optional
 Maintainer: Debathena Project <debathena@mit.edu>
-Standards-Version: 3.7.2
-Build-Depends: @cdbs@, libpam0g-dev, libkrb5-dev
+Standards-Version: 3.9.3
+Build-Depends: cdbs, debhelper, dh-buildinfo, libpam0g-dev, libkrb5-dev
 
 Package: libpam-krb524
 Architecture: any

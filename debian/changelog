@@ -1,8 +1,11 @@
 libpam-krb524 (1.4-0debathena2) UNRELEASED; urgency=low
 
   * Bump debian/compat to 6
+  * Switch from control.in to control (Trac: #561)
+  * Bump Standards-Version to 3.9.3
+  * Bump compat level to 7
 
- -- Jonathan Reed <jdreed@mit.edu>  Sun, 01 Jul 2012 12:21:41 -0400
+ -- Jonathan Reed <jdreed@mit.edu>  Wed, 03 Apr 2013 13:31:10 -0400
 
 libpam-krb524 (1.4-0debathena1) unstable; urgency=low
 
